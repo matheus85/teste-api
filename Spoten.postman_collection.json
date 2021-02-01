@@ -1,0 +1,287 @@
+{
+	"info": {
+		"_postman_id": "edcceb5c-6fa1-4443-a447-bb8fa440d3e4",
+		"name": "Spoten",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "teste3@teste3.com.br",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "12345678",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "testeeeee nameeeeeeeeee",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url_test}}/signup",
+					"host": [
+						"{{url_test}}"
+					],
+					"path": [
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "teste3@teste3.com.br",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "12345678",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url_test}}/login",
+					"host": [
+						"{{url_test}}"
+					],
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Logout",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token_bearer}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{url_test}}/logout",
+					"host": [
+						"{{url_test}}"
+					],
+					"path": [
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Movies - Index",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token_bearer}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url_test}}/movies",
+					"host": [
+						"{{url_test}}"
+					],
+					"path": [
+						"movies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Movies - Show",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token_bearer}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url_test}}/movies/5",
+					"host": [
+						"{{url_test}}"
+					],
+					"path": [
+						"movies",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Ratings - Index",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token_bearer}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url_test}}/ratings",
+					"host": [
+						"{{url_test}}"
+					],
+					"path": [
+						"ratings"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Ratings - Show",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token_bearer}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url_test}}/ratings/5",
+					"host": [
+						"{{url_test}}"
+					],
+					"path": [
+						"ratings",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Ratings - Store",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token_bearer}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "movie_id",
+							"value": "5",
+							"type": "text"
+						},
+						{
+							"key": "rating",
+							"value": "9",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url_test}}/ratings",
+					"host": [
+						"{{url_test}}"
+					],
+					"path": [
+						"ratings"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url_test",
+			"value": "http://192.168.15.6/spoten/public"
+		},
+		{
+			"key": "token_bearer",
+			"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiOGFjOGI0YWI0N2VhNTdmZDljOGFkNDUwNWVmYTc4MDM5MWU2YTg1MWFlODQxM2YxMjMxYWZmYTNkNDM2OWY1MjdjNzdlNTkzMDA4Njk1NDgiLCJpYXQiOjE2MTIxNTIwNjUsIm5iZiI6MTYxMjE1MjA2NSwiZXhwIjoxNjQzNjg4MDY1LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.P1DjUunh3PWRZKX6NHgotY7DVD8Y6BFbHkQF00KXF4YRyucbjLvTS4iJ51nemV9T3iEIXTG31388ONxAFfGcw5gVRbxERBWrp2UFkXfo3pv_C0FvWuT9I3LEbJd9_5qgnSHiU3LzzvOnNnuAXf2cIgOE9ctzw4BGD5-nQiOeq1W0V7BGVLqO5-kqWSz9InuAMJKyy31fL8fMRsiV7Xp3ZKAeOdgaEb2QzeDzHZ9Bn0TZ5IfobJvJYFB9tRM9hqgXSV-4FcMxD5AHONGIf6Tg0fbrYf21KJGKPe75lbap3J45SFXTzr7dh3_Y50KT1BdZFUjCWUN_Z3LFanZrR7JrOp0dJXrov7e2kgWxNfKGpsLfb-Ke9LF2OD0JG0104ivuK-7YRZ18YNgtHROgT1Q8AfInqH7oIqsExxbmPWJj9LyE-Q0CxTDuJXdTuwsv698zEWUiCFLPFnYKgorGg71XpLuhN28DxGXWvlJTsCGiRSB8M_ksnna0bvEWKuADDWN7HJCrnJGyRdp1t6tu3EzAtBBvtbowFhUvthj4gi1GO3PlrhdNKvZ1YHDNWAtwNQcZYbn0McObH1rpUgWkNFBMywqgKZSaHJWO-SfDJm0PnP-Bl_kdxLx3hY6TIruFfYsqkJy68zHGtwn-UIRHuc8_MqOaYqwWZ7zz3TSuMjmeGy8"
+		}
+	]
+}
