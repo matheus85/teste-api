@@ -10,7 +10,8 @@
 
 4 - php artisan migrate --seed
 
-5 - Todos os endpoints foram salvos em uma collection do postman e está na raiz do projeto (Spoten.postman_collection.json).
+5 - Todos os endpoints foram salvos em uma collection do postman e está na raiz do projeto.
+Arquivo: Spoten.postman_collection.json
 Alterar as variáveis url_test e token_bearer da collection para as suas informações.
 
 Basicamente o projeto é:
